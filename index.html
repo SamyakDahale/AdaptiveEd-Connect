@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>AdaptiveEd Connect</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+
+</head>
+
+<body>
+	<header>
+	  <div class="logo">
+		<img src="iconlogo.png" alt="AdaptiveEd Connect Logo">
+	  </div>
+	  <nav>
+		 <ul>
+		  <li><a href="#home">Home</a> </li>
+		  <li> <a href="#about">About</a> </li>
+		  <li> <a href="feedback.html">Feedback Forms</a> </li>
+      <li> <a href="#testimonials">Testimonials</a> </li>
+		  <li> <a href="#contact">Contact</a> </li>
+      <li> <a href="E:\MGM UDICT\SEM 4\DIPEX\27-02-2024\Login\GECAindex.html">Login/Signup</a> </li>
+    </ul>
+	  </nav>
+	</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Welcome to AdaptiveEd Connect</h1>
+    <p>Bridging Minds, Building Futures for Every Child's Unique Potential.</p>
+    <a href="#menu" class="btn">Explore Our Menu</a>
+  </div>
+</section>
+
+<section id = "about" class="about dark-theme">
+  <div class="about-content">
+    <h2>About AdaptiveEd Connect</h2>
+    <p>Adaptive Ed Connect is a revolutionary educational portal designed for children with dyslexia and Down syndrome. </p>
+    <p> innovative platform not only offers personalized learning resources catering to diverse needs but also serves as a hub connecting parents and NGOs in the special education domain. </p>
+    <p>Focused on inclusivity, it empowers children with unique abilities, fostering a supportive community. </p>
+  </div>
+  <div class="about-image">
+    <img src="about-image.jpg" alt="About Image">
+  </div>
+</section>
+
+
+<section id = "testimonials" class="testimonials">
+  <h2>What Our Customers Say</h2>
+  <div class="testimonial">
+    <img src="customer1.jpg" alt="Customer 1">
+    <p>"Adaptive Ed Connect has been a game-changer for my dyslexic child, providing tailored educational resources and connecting us with a supportive community of parents and NGOs. Truly a lifeline for inclusive learning!"</p>
+    <h4>Samyak Dahale</h4>
+  </div>
+  <div class="testimonial">
+    <img src="customer2.jpg" alt="Customer 2">
+    <p>"As a parent of a child with Down syndrome, Adaptive Ed Connect has not only empowered my child with engaging educational tools but also fostered a sense of belonging through its strong network of like-minded parents and dedicated NGOs. A beacon of inclusivity in education"</p>
+    <h4>Jane Smith</h4>
+  </div>
+</section>
+
+
+<section id = "gallery"class="gallery">
+  <h2>Gallery</h2>
+  <div class="image-carousel">
+    <button class="nav-btn" onclick="changeImage(-1)">❮</button>
+  <div class="image-grid">
+    <div class="image-item">
+      <img src="gallery1.jpg" alt="Image 1">
+    </div>
+    <div class="image-item">
+      <img src="gallery2.jpg" alt="Image 2">
+    </div>
+    <div class="image-item">
+      <img src="gallery3.jpg" alt="Image 3">
+    </div>
+    <div class="image-item">
+      <img src="gallery4.jpg" alt="Image 4">
+    </div>
+    <div class="image-item">
+      <img src="gallery4.jpg" alt="Image 4">
+    </div>
+  </div>
+  <button class="nav-btn" onclick="changeImage(1)">❯</button>
+</div>
+</section>
+
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="iconlogo.png" alt="Logo">
+    </div>
+    <h2>Contact the Website Owner</h2>
+    <div class="owner-contact-info">
+      <div class="info-item">
+        <i class="fas fa-user"></i>
+        <p>John Doe</p>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-envelope"></i>
+        <p>john.doe@example.com</p>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-phone-alt"></i>
+        <p>+1 123-456-7890</p>
+      </div>
+    </div>
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+  <p class="footer-text">&copy; 2023 AdaptiveEd Connect. All rights reserved.</p>
+</footer>
+
+<!-- Add this script tag before the closing </body> tag -->
+<script>
+  let currentIndex = 0;
+
+  function changeImage(direction) {
+    const imageGrid = document.querySelector('.image-grid');
+    const imageItems = document.querySelectorAll('.image-item');
+    const totalImages = imageItems.length;
+    const newIndex = currentIndex + direction;
+
+    if (newIndex >= 0 && newIndex < totalImages) {
+      currentIndex = newIndex;
+      const scrollAmount = imageItems[currentIndex].offsetLeft;
+      imageGrid.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+    }
+  }
+</script>
+
+</body>
+</html>
